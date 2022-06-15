@@ -8,8 +8,10 @@
 #include "port_Presence.h"
 
 void HFeed_PresenceManager::start_measurement () {
-	Driver->hcsr04Trigger();
-	last_time_measure=HFEED_PRESENCE_GET_CURR_MILLIS;
+	if (HFEED_PRESENCE_GET_CURR_MILLIS - last_time_measure >= 60) {
+		Driver->hcsr04Trigger();
+		last_time_measure=HFEED_PRESENCE_GET_CURR_MILLIS;
+	}
 	//	busy waiting is blasphemy, why don't we work with polling ad this point?
 	//Driver->hcsr04DelayNextMeasurement();
 }

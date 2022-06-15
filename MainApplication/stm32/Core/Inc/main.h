@@ -63,12 +63,16 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define WEB_SERV_TX_Pin GPIO_PIN_0
+#define WEB_SERV_TX_GPIO_Port GPIOA
+#define WEB_SERV_RX_Pin GPIO_PIN_1
+#define WEB_SERV_RX_GPIO_Port GPIOA
 #define BOARD_LED_Pin GPIO_PIN_5
 #define BOARD_LED_GPIO_Port GPIOA
 #define HCSR04_ECHO_Pin GPIO_PIN_14
 #define HCSR04_ECHO_GPIO_Port GPIOB
-#define HCSR04_TRIGGER_Pin GPIO_PIN_15
-#define HCSR04_TRIGGER_GPIO_Port GPIOB
+#define HCSR04_Trigger_Pin GPIO_PIN_6
+#define HCSR04_Trigger_GPIO_Port GPIOC
 #define HX_711_DOUT_Pin GPIO_PIN_8
 #define HX_711_DOUT_GPIO_Port GPIOA
 #define HX711_PD_SCK_Pin GPIO_PIN_9

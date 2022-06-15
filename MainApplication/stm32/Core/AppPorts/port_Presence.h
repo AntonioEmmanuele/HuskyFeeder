@@ -13,7 +13,7 @@
 
 #if PRESENCE_STM32F446RE
 #include "main.h"
-#include "hcsr04_driver.h"
+#include "../AppDrivers/hcsr04/hcsr04_driver.h"
 #endif
 
 typedef struct {

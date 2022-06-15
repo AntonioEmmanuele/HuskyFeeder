@@ -262,7 +262,16 @@ void HuskyFeeder::exec_wait_for_BAUBAU(){
 		return ;
 	if (this->presence_manager==0)
 		return ;
+#if HFEED_AUTOMATIC_DBG
+	char dbg[128];
+	sprintf(dbg,"[WAIT_FOR BAUBAU] Waiting for quadrupede \r \n");
+	HAL_UART_Transmit(&huart2,(uint8_t *) dbg, strlen(dbg), 200);
+#endif
 	if(this->presence_manager->is_dog_present()){
+#if HFEED_AUTOMATIC_DBG
+	sprintf(dbg,"[WAIT_FOR BAUBAU] quadrupede FOUND \r \n");
+	HAL_UART_Transmit(&huart2,(uint8_t *) dbg, strlen(dbg), 200);
+#endif
 		this->current_state=HFeed_State::SERVING;
 		this->exec_serving();
 	}

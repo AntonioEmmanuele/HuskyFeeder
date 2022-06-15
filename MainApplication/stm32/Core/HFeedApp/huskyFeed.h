@@ -10,6 +10,7 @@ extern UART_HandleTypeDef huart2;
 #endif
 #define HFEED_SERVING_DBG	1
 #define HFEED_DEADLINE_DBG	1
+#define HFEED_AUTOMATIC_DBG	1
 #define HFEED_UART_FMT	1
 /****************
  *  FILE DESCR:

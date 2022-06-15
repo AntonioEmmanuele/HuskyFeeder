@@ -2,7 +2,7 @@
 #define PORT_WEIGHT
 #define HFEED_USE_HX711	1
 #if HFEED_USE_HX711
-#include "hx711_driver.h"
+#include "../AppDrivers/hx711/hx711_driver.h"
 #endif
 #define __AINL  __attribute__((always_inline)) inline
 #define HFEED_WM_MEASURE_DOUBLE	0

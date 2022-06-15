@@ -44,8 +44,8 @@ void hcsr04_driver::hcsr04Print(UART_HandleTypeDef* huart) {
 
 	char u_buff[256];
 
-	sprintf(u_buff, "    [LAST AVG]   : %d \n\r", this->avg);
-	HAL_UART_Transmit(huart, (uint8_t*)u_buff, strlen(u_buff),10);
+	sprintf(u_buff, "[LAST AVG]: %d\r\n", this->avg);
+	HAL_UART_Transmit(huart, (uint8_t*)u_buff, strlen(u_buff),100);
 
 #endif
 }

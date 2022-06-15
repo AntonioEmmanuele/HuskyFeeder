@@ -1,4 +1,4 @@
-#include <HX711_Driver.h>
+#include "hx711_driver.h"
 
 /*
  * @Descr:	Returns 0 when the device is ready, after waiting at most  milliseconds_timeout

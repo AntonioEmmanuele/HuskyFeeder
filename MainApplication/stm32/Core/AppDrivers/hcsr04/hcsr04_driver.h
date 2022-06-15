@@ -8,8 +8,8 @@
 #ifndef INC_HCSR04_DRIVER_H_
 #define INC_HCSR04_DRIVER_H_
 
-#include "mcu_defs.h"
-#define _HCSR04DEBUG_ 0
+#include "../AppDrivers/mcu_defs.h"
+#define _HCSR04DEBUG_ 1
 
 #if _HCSR04DEBUG_
 #include "string.h"
@@ -38,11 +38,11 @@ class hcsr04_driver {
 #endif
 	int avg_array[NUM_AVG];
 	uint8_t counter_avg;
-	bool valid;
 
   public:
 	//	Edit Emmo: This flag becomes true when the echo rising edge occurs and false when f.e. occurs
 	bool is_measuring;
+	bool valid;
 
     /*
      * Valori usati dalla callback del Timer in ICM per
